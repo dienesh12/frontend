@@ -41,11 +41,11 @@ const Add = () => {
       const data = new FormData()
 
       data.append("file", pic)
-      data.append("upload_preset", process.env.REACT_APP_CLOUDINARY_PRESET)
-      data.append("cloud_name", process.env.REACT_APP_CLOUDINARY_NAME)
+      data.append("upload_preset", "assignment")
+      data.append("cloud_name", "dohhqfu3i")
 
       // send post req to cloudinary
-      fetch(`https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_NAME}/image/upload`, {
+      fetch(`https://api.cloudinary.com/v1_1/dohhqfu3i/image/upload`, {
         method: "post",
         body: data
       })
@@ -96,7 +96,7 @@ const Add = () => {
       data.append("file", vid)
       data.append("upload_preset", "video_preset")
 
-      const API = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_NAME}/video/upload`
+      const API = `https://api.cloudinary.com/v1_1/dohhqfu3i/video/upload`
       const res = await axios.post(API, data)
       const { secure_url } = res.data;
       console.log(secure_url);

@@ -1,0 +1,28 @@
+.Box {
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-color: aquamarine;
+}
+
+.img-cont {
+    height: 100%;
+    width: 200px;
+    margin-right: 40px;
+}
+
+.content-cont {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-player {
+    position: relative;
+    align-items: center;
+}

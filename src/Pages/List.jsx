@@ -18,7 +18,7 @@ const List = () => {
 
   const fetchList = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5005/contents")
+      const { data } = await axios.get("https://assign-back.onrender.com/contents")
 
       console.log(data)
       setContents(data)

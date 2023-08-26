@@ -11,7 +11,7 @@ const Add = () => {
 
   const {contents, setContents} = ContentState()
 
-  const BACK_URL = "http://localhost:5005"
+  const BACK_URL = "https://assign-back.onrender.com"
 
   const [title, setTitle] = useState("")
   const [desc, setDesc] = useState("")

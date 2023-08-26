@@ -9,7 +9,7 @@ const Video = () => {
 
   const { selectedContent, setSelectedContent } = ContentState()
 
-  const BACK_URL = "http://localhost:5005"
+  const BACK_URL = "https://assign-back.onrender.com"
 
   const { id } = useParams()
 

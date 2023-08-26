@@ -21,7 +21,7 @@ const Add = () => {
   const [video, setVideo] = useState("")
 
   const postImage = async (pic) => {
-
+    setLoading(true)
     // pic not uploaded
     if(pic === undefined) {
         toast({
@@ -32,6 +32,7 @@ const Add = () => {
           position: "bottom"
         })
         
+        setLoading(false)
         return
     }
 
@@ -57,7 +58,7 @@ const Add = () => {
       .catch((err) => {
         console.log(err)
       })
-  
+      setLoading(false)
     }
     // if the uploaded file is not an image 
     else {
@@ -74,6 +75,7 @@ const Add = () => {
   }
 
   const postVideo = async (vid) => {
+    setLoading(true)
     if(!vid) {
       toast({
         title: "Please Select a Video!",
@@ -82,7 +84,8 @@ const Add = () => {
         isClosable: true,
         position: "bottom",
       });
-
+      
+      setLoading(false)
       return
     }
 
@@ -98,6 +101,7 @@ const Add = () => {
       const { secure_url } = res.data;
       console.log(secure_url);
       setVideoURL(secure_url.toString())
+      setLoading(false)
     } else {
       toast({
         title: "Please Select a Video!",
@@ -106,7 +110,7 @@ const Add = () => {
         isClosable: true,
         position: "bottom",
       });
-
+      setLoading(false)
       return
     }
   }
